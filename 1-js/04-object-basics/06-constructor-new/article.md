@@ -73,7 +73,7 @@ let user = {
 
 ```js
 let user = new function() {
-  this.name = "Jack";
+  this.name = "John";
   this.isAdmin = false;
 
   // ...інший код для створення користувача
@@ -122,8 +122,8 @@ function User(name) {
   this.name = name;
 }
 
-let vasya = User("Jack"); // переадресовує виклик на new User
-alert(vasya.name); // Jack
+let john = User("John"); // переадресовує виклик на new User
+alert(john.name); // John
 ```
 
 Такий підхід іноді використовується в бібліотеках для створення більш гнучкого синтаксису, який дозволяє розробникам викликати функції за допомогою оператора new або без нього.
@@ -148,7 +148,7 @@ alert(vasya.name); // Jack
 ```js run
 function BigUser() {
 
-  this.name = "Jack";
+  this.name = "John";
 
   return { name: "Godzilla" };  // <-- повертає цей об’єкт
 }
@@ -161,7 +161,7 @@ alert( new BigUser().name );  // Godzilla, отримали цей об’єкт
 ```js run
 function SmallUser() {
 
-  this.name = "Jack";
+  this.name = "John";
 
   return; // <-- повертає this
 }
@@ -202,14 +202,14 @@ function User(name) {
 }
 
 *!*
-let jack = new User("Jack");
+let jack = new User("John");
 
-jack.sayHi(); // Моє ім'я: Jack
+jack.sayHi(); // Моє ім'я: John
 */!*
 
 /*
 jack = {
-   name: "Jack",
+   name: "John",
    sayHi: function() { ... }
 }
 */
